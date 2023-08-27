@@ -15,19 +15,24 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-6">
             <h5>About Us</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>
+              We are a dedicated team of engineering students working on the PLC
+              Remote System project. Our goal is to create an innovative
+              solution that enables remote control of Programmable Logic
+              Controllers (PLCs).{" "}
+            </p>
           </div>
           <div className="col-md-6">
             <h5>Contact</h5>
             <ul className="list-unstyled">
-              <li>Email: info@example.com</li>
-              <li>Phone: +1 123-456-7890</li>
+              <li>Email 📧: syntaxsavants@gmail.com</li>
+              <li>Phone ☎️: +1 123-456-7890</li>
             </ul>
           </div>
         </div>
       </div>
       <div className="container text-center py-3">
-        &copy; 2023 Your Company. All rights reserved.
+        &copy; 2023 CO227-Project. All rights reserved.
       </div>
     </footer>
   );
