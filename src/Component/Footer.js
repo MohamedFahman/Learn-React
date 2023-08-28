@@ -3,7 +3,6 @@ import React from "react"; // Import React
 const Footer = () => {
   const footerStyle = {
     padding: "10px",
-    position: "fixed",
     left: "0",
     bottom: "0",
     width: "100%",

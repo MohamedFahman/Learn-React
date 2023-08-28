@@ -16,20 +16,19 @@ const App = () => {
     name: "Fahman M.H.M.",
     age: "23",
     reg: "E/19/105",
-  };
-
-  const studentDetails2 = {
-    name: "Faseeh M.F.M.",
-    age: "23",
-    reg: "E/19/106",
+    projects: [
+      "Student Result Management System",
+      "Online Shopping System",
+      "PLC kit Remote Control System",
+    ],
   };
 
   return (
     <div>
       <Hearder />
+      <NavigationBar items={navigationItems} />
       <Student details={studentDetails1} />
-      <Student details={studentDetails2} />
-      {/* <NavigationBar items={navigationItems} /> */}
+      <Student />
       <Footer />
       {/* Other content */}
     </div>
