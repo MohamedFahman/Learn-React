@@ -14,7 +14,7 @@ const App = () => {
 
   const studentDetails1 = {
     name: "Fahman M.H.M.",
-    age: "23",
+    age: 23,
     reg: "E/19/105",
     projects: [
       "Student Result Management System",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Student(props) {
   const defaultDetails = {
@@ -8,12 +8,18 @@ function Student(props) {
     projects: ["No projects"],
   };
 
-  const { details = defaultDetails } = props;
+  let { details = defaultDetails } = props;
+
+  const [dynamicAge, setDynamicAge] = useState(details.age);
+
+  const handleclick = () => {
+    setDynamicAge(dynamicAge + 1);
+  };
 
   return (
     <div className="container">
       <div style={{ fontSize: "20px" }}>Name: {details.name}</div>
-      <div>Age: {details.age}</div>
+      <div>Age: {dynamicAge}</div>
       <div>Reg. No: {details.reg}</div>
       <div>
         <b>Projects : </b>
@@ -23,6 +29,14 @@ function Student(props) {
           </div>
         ))}
       </div>
+      <br />
+      <button
+        type="button"
+        className="btn btn-outline-primary"
+        onClick={handleclick}
+      >
+        Increace Age
+      </button>
       <hr />
     </div>
   );
