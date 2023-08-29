@@ -1,0 +1,18 @@
+.about-container {
+  padding: 5px;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.center {
+  display: block;
+  text-align: center;
+}
+
+.text {
+  padding-left: 150px;
+  padding-right: 150px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+}

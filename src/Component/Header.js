@@ -5,12 +5,12 @@ function Header() {
     color: "dodgerblue",
     padding: "15px",
     display: "block",
+    backgroundColor: "lavender",
     textAlign: "center",
   };
   return (
     <div className="container">
       <h2 style={styleName}>PLC Kit Remote Control System.</h2>
-      <hr />
     </div>
   );
 }

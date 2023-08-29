@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Student(props) {
   const defaultDetails = {
@@ -10,11 +10,22 @@ function Student(props) {
 
   let { details = defaultDetails } = props;
 
-  const [dynamicAge, setDynamicAge] = useState(details.age);
+  const [dynamicAge, setDynamicAge] = useState(parseInt(details.age)); // Parse age as an integer
 
   const handleclick = () => {
     setDynamicAge(dynamicAge + 1);
   };
+
+  useEffect(() => {
+    console.log("Initial Age: " + details.age);
+  }, []);
+
+  useEffect(() => {
+    if (dynamicAge >= 30) {
+      // Check dynamicAge instead of details.dynamicAge
+      alert("Age is greater than or equal to 30.");
+    }
+  }, [dynamicAge]); // Watch for changes in dynamicAge
 
   return (
     <div className="container">
@@ -35,7 +46,7 @@ function Student(props) {
         className="btn btn-outline-primary"
         onClick={handleclick}
       >
-        Increace Age
+        Increase Age
       </button>
       <hr />
     </div>

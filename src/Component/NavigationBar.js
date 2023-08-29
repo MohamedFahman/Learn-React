@@ -1,20 +1,32 @@
 import React from "react";
-import { Navbar, Nav, NavDropdown, Container } from "bootstrap";
+import { Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const NavigationBar = (props) => {
+const NavigationBar = () => {
   return (
-    <div style={{ fontSize: "20px" }}>
-      <nav className="container">
-        <ul className="nav nav-tabs justify-content-center">
-          {props.items.map((item, index) => (
-            <li key={index} className="nav-item">
-              <a href={item.link} className="nav-link">
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+    <div>
+      <Nav className="justify-content-center" activeKey="/home">
+        <Nav.Item>
+          <Nav.Link as={Link} to="/">
+            Home
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={Link} to="/about">
+            About
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={Link} to="/contact">
+            Contact
+          </Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link as={Link} to="/project">
+            Project
+          </Nav.Link>
+        </Nav.Item>
+      </Nav>
     </div>
   );
 };
